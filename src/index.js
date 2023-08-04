@@ -4,7 +4,7 @@ import config from "./src/config/index.js"
 
 (async ()=>{
   try {
-    await mongoose.connect("config.MONGODV_URL")
+    await mongoose.connect("config.MONGODB_URL")
     console.log("DB CONNECTED !");
 
     app.on('error', (err) => {
