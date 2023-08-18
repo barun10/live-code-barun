@@ -25,7 +25,7 @@ export const isLoggedIn = asyncHandler(async(req, res, next) => {
     }
 })
 
-export const authorize = (...requiredRoles) => {} = asyncHandler( async(req, res, next) => {
+export const authorize = (...requiredRoles) => asyncHandler( async(req, res, next) => {
     if (!requiredRoles.includes(req.user.role)) {
         throw new CustomError("You are not authorize to access this resource")
     }
