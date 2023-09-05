@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 import app from "./app.js";
-import config from "./src/config/index.js"
+import config from "./config/index.js";
 
 (async ()=>{
   try {
-    await mongoose.connect("config.MONGODB_URL")
+    await mongoose.connect(config.MONGODB_URL)
     console.log("DB CONNECTED !");
 
     app.on('error', (err) => {
