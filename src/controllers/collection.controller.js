@@ -62,7 +62,7 @@ export const deleteCollection = asyncHandler(async(req, res) => {
         message: "Collection was deleted successfully"
     })
 })
-export const getAllCollection = asyncHandler(async(req, res) => {
+export const getAllCollections = asyncHandler(async(req, res) => {
 
     const collections = await Collection.find()
 
